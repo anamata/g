@@ -266,9 +266,9 @@ textarea {
 /* ogolne style */
 
 * {box-sizing: border-box;}
-html,body {background-color: #dddddd;color: #333;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+html, body {background-color: #dddddd;color: #333;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
 
-body {/*overflow:hidden;*/}
+html, body {height: 100%;overflow:hidden;}
 
 a {text-decoration: none;color:inherit}
 
@@ -342,13 +342,14 @@ main {
   /* width: 960px;840 plus 60 na marginesy
   height: 960px;*/
   width: 1260px;
-  height: 940px;
+  height: 1260px;
   margin: 0 auto;
   display:flex;
   justify-content: space-between;
   align-content: space-between;
   flex-wrap: wrap;
   margin-top: 90px;
+  margin-bottom: 30px;
 }
 main article {
   /*border: 1px solid black;*/
@@ -423,6 +424,7 @@ body {position: relative;/**/}
   align-content: center;
   justify-content: center;
   align-items: center;
+  background-color: #dddddd;/* powtarza kolor tla body po to zeby zakryc niepotrzebnie widoczny nieaktywny ewentualny pasek scrolla */
 }
 
 .overlay-in {
@@ -516,4 +518,45 @@ footer {display:none;}
    overflow: hidden;
    /*margin-right: 10px;zeby uniknac przeskoku przy znikaniu scrollbara, w firefoxie nie da sie co do pixela ... */
 
+}
+
+.body-wrap {
+  overflow: auto;
+  height: 100%;
+}
+
+
+
+
+/* scrollbar */
+
+/* firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color:#999999 #ffffff ;
+}
+
+/* chrome etc */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+} 
+
+.hidescrollbar .body-wrap {
+   /*overflow: hidden;
+   margin-right: 10px;zeby uniknac przeskoku przy znikaniu scrollbara, w firefoxie nie da sie co do pixela ... */
 }

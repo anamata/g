@@ -7,6 +7,8 @@ $(document).ready(
             
             /* oznacz wybrany produkt */
             $( this ).parent().toggleClass("klikniete"); 
+
+            
             
             /* overlay on + show animation */
             $(".overlay").addClass("showoverlay anim1"); 
@@ -18,7 +20,7 @@ $(document).ready(
 
             //$("main").toggleClass("kliknietymain")
 
-
+            $(".overlay_photos").scrollTop(0);
             e.preventDefault();
           });
         $(".closeoverlay").on( "click", function(e) {
@@ -37,7 +39,7 @@ $(document).ready(
 //The plugin function is called in $(window).on("load") so it executes after all page elements (like images) are loaded. 
 
 $(window).on("load",function(){
-        $(".body-wrap").mCustomScrollbar();
+        
 });
 /*/*
 click(function(){alert("sdas")})
