@@ -32,6 +32,17 @@ $(document).ready(
 
             e.preventDefault();
         });  
+
+        $(".shownext").on( "click", function(e) {
+            var id=1
+
+            e.preventDefault();
+        });  
+        $(".showprev").on( "click", function(e) {
+            var id=2
+
+            e.preventDefault();
+        });  
     }
 )
 
