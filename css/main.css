@@ -338,8 +338,10 @@ header nav.menu_left ul li ul {display:none !important;}
 
 /* main */
 main {
-  width: 960px;/* 840 plus 60 na marginesy*/
-  height: 960px;
+  /* width: 960px;840 plus 60 na marginesy
+  height: 960px;*/
+  width: 1260px;
+  height: 940px;
   margin: 0 auto;
   display:flex;
   justify-content: space-between;
@@ -394,7 +396,7 @@ main article a:hover .opis {
 
 main article a:hover .obraz img {
   /*transform: translate(0, -20px);*/
-  transform:scale(1.05);
+  transform:scale(1.1);
   /*filter:brightness(0.6);*/
   filter:opacity(0.5);
 
@@ -409,12 +411,12 @@ body {position: relative;/**/}
   position: fixed;
   width: 100%;
   height: 100%;
-  top:0%;
+  top:60px;/* miejsce na header */
   left: 0%;
   bottom: 0%;
   right: 0%;
   z-index: 9999;
-  background-color:rgba(255, 255, 255, 0.9);
+  /*background-color:rgba(255, 255, 255, 0.9);*/
   overflow: hidden;
   align-content: center;
   justify-content: center;
@@ -423,8 +425,8 @@ body {position: relative;/**/}
 
 .overlay-in {
   display: flex;
-  width: 960px;
-  height: 630px;
+  width: 1300px; /* troszke szersze bo nie pokrywa sie wycentrowanie z articlami i wystaje spod spodu, chyba przez scrollbary */
+  height: 100%;
   background-color: white;
 
 }
@@ -448,7 +450,7 @@ body {position: relative;/**/}
 
 .overlay_photos {
   width: 67%;
-  overflow-y:scroll;
+  /**/overflow-y:scroll;
 }
 
 .overlay_photos img {
@@ -460,7 +462,7 @@ body {position: relative;/**/}
   width: 33%;
   padding: 50px;
   background-color: white;
-  overflow-y:auto;
+  /**/overflow-y:auto;
 }
 
 
@@ -520,11 +522,11 @@ body {position: relative;/**/}
 /* scrollbar */
 
 /* firefox */
-html {
+* {
   scrollbar-width: thin;
-  scrollbar-color: #87ceeb #ff5621;
-
+  scrollbar-color:#999999 #ffffff ;
 }
+
 /* chrome etc */
 ::-webkit-scrollbar {
   width: 10px;
@@ -546,7 +548,7 @@ html {
 } 
 
 .hidescrollbar {
-  overflow: hidden;
-  margin-right: 10px; /* zeby uniknac przeskoku przy znikaniu scrollbara, w firefoxie nie da sie co do pixela ... */
+   overflow: hidden;
+  margin-right: 10px; /*zeby uniknac przeskoku przy znikaniu scrollbara, w firefoxie nie da sie co do pixela ... */
 
 }

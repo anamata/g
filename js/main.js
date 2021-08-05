@@ -21,7 +21,7 @@ $(document).ready(
 
             e.preventDefault();
           });
-        $(".closebtn").on( "click", function(e) {
+        $(".closeoverlay").on( "click", function(e) {
             $( this ).parent().removeClass("klikniete");
             //$("main").toggleClass("kliknietymain");
             $("body").removeClass("hidescrollbar");
