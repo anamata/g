@@ -34,8 +34,12 @@ $(document).ready(
 )
 
 
+//The plugin function is called in $(window).on("load") so it executes after all page elements (like images) are loaded. 
 
-/*
+$(window).on("load",function(){
+        $("body-wrap").mCustomScrollbar();
+});
+/*/*
 click(function(){alert("sdas")})
 
 
